@@ -1,0 +1,24 @@
+<div (load)="getCountries()"></div>
+<div class="container">
+
+</div>
+<div class="card-holder">
+    <div *ngFor="let c of countryData">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{c.name}}</mat-card-title>
+                <mat-card-subtitle>{{c.capital}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{c.flag}}" alt="{{c.name}} Flag" height="10%" width="30%">
+            <mat-card-content>
+                <p>
+                    <b>Region:</b>{{c.region}}</p>
+                <p><b>Sub-Region:</b>{{c.subregion}} </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary">More</button>
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+</div>
